@@ -1,7 +1,6 @@
 import random
 import numpy as np
 import pandas as pd
-import random
 from scipy import stats
 from tabulate import tabulate
 from Customer import Customer
