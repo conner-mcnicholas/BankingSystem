@@ -4,34 +4,48 @@ import pandas as pd
 import random
 from scipy import stats
 from tabulate import tabulate
-import Customer
+from Customer import Customer
+from Account import Account
 
 class Banking:
-    def __init__(self,ledger):
-        ind = random.randint(1,10)
-        customer_name = ledger.iloc[ind].cname
-        customer_id = ledger.iloc[ind].cid
-        credit_rating = ledger.iloc[ind].crat
-        balance = ledger.iloc[ind].bal
-        account_id = ledger.iloc[ind].aid
-        print('Welcome, ' + customer_name + '!')
-        c = Customer(customer_name, customer_id, account_id, credit_rating,balance)
+    def __init__(self,data={}):
+        customers=random.sample(['Jack','Jill','John','Joe','Jed','Jeff','Jess','Jim','Templeton','Hubert'],k=10)
+        accounts=[111,123,222,333,444,555,666,777,888,999]
+        balances=random.sample(list(-1*np.round(stats.uniform(0, 10000.0).rvs(20),2))
+                        +list(np.round(stats.uniform(0, 1000000.0).rvs(100),2)),k=10)
+        self.data = {'cname':customers,
+                'aid':accounts,
+                'bal':balances}
+        print("Here some dummy data to reference while you enter new data:\n")
+        print(tabulate(pd.DataFrame(self.data), headers='keys', tablefmt='psql', floatfmt='.2f',showindex=False))
 
+    def transact(self):
+        c = Customer()
+        c.name = input('Please enter name: ')
+        c.accountid = input('Please enter account id: ')
+        a = Account()
+        a.accountid = c.accountid
+        a.balance = float(input('Please how much money you want to play with: '))
+        status = True
+        while status:
+            session = c.visit_atm()
+            if session == 'g':
+                print('Current Balance = $'+str(a.balance))
+            elif session == 'd':
+                amount = input('How much would you like to deposit?')
+                a.deposit(amount)
+            elif session == 'w':
+                amount = input('How much would you like to withdraw?')
+                a.withdraw(amount)
+            elif session == 'e':
+                break
+        b.data['cname'].append(c.name)
+        b.data['aid'].append(a.accountid)
+        b.data['bal'].append(a.balance)
+        print("\nUpdated bank database after visit:\n")
+        print(tabulate(pd.DataFrame(b.data), headers='keys', tablefmt='psql',floatfmt='.2f', showindex=False))
+        print('\nHave a nice day...')
+            
 if __name__ == "__main__":
-    customerids=['123abc','123fgk','123xyz','666abc','666fgk','777vwq','666xyz','999abc','999fgk','999xyz']
-    customers=random.sample(['Jack','Jill','John','Joe','Jed','Jeff','Jess','Jim','Templeton','Hubert'],k=10)
-    accounts=[111,123,222,333,444,555,666,777,888,999]
-    rating=random.choices(['A','B','C','D','F'],k=10)
-    balances=random.sample(list(-1*np.round(stats.uniform(0, 10000.0).rvs(20),2))
-                       +list(np.round(stats.uniform(0, 1000000.0).rvs(100),2)),k=10)
-    data = {'cid':customerids,
-            'cname':customers,
-            'aid':accounts,
-            'crat':rating,
-            'bal':balances}
-    df_ledger = pd.DataFrame(data)
-
-    print(tabulate(df_ledger, headers='keys', tablefmt='psql', showindex=False))
-
-
-    b = Banking(df_ledger)
+    b = Banking()
+    b.transact()
