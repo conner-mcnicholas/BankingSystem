@@ -1,0 +1,155 @@
+➜ python Banking.py
+Here some dummy data to reference while you enter new data:
+
++-----------+-------------+-----------+--------------------+-----------------+
+| cname     |   accountid |   balance |   loan_outstanding | loan_deadline   |
+|-----------+-------------+-----------+--------------------+-----------------|
+| Hubert    |         111 | 404537.60 |               0.00 | N/A             |
+| Jess      |         123 | 343099.32 |               0.00 | N/A             |
+| Jeff      |         222 | 113787.12 |          564965.00 | 2023-09-10      |
+| John      |         333 | 724667.11 |          297130.00 | 2023-08-29      |
+| Jim       |         444 |  35599.15 |          238517.00 | 2022-05-24      |
+| Joe       |         555 | 768539.82 |          791537.00 | 2023-05-22      |
+| Jack      |         666 | 155564.45 |               0.00 | N/A             |
+| Templeton |         777 | 673336.22 |               0.00 | N/A             |
+| Jed       |         888 | 621132.71 |          571183.00 | 2022-09-29      |
+| Jill      |         999 |  89286.93 |               0.00 | N/A             |
++-----------+-------------+-----------+--------------------+-----------------+
+Please enter name: Conner
+Enter "A" for ATM (Deposits/Withdrawals) or "T" for Teller (Loans)
+A
+Please enter account id: 29319
+Please how much money you want to play with: 1000
+Would you like to [g]et balance, [d]eposit, [w]ithdraw, or [e]nd transaction?
+w
+How much would you like to withdraw?1200
+Not enough funds!
+Would you like to [g]et balance, [d]eposit, [w]ithdraw, or [e]nd transaction?
+d
+How much would you like to deposit?300
+Would you like to [g]et balance, [d]eposit, [w]ithdraw, or [e]nd transaction?
+w
+How much would you like to withdraw?1200
+Would you like to [g]et balance, [d]eposit, [w]ithdraw, or [e]nd transaction?
+e
+
+Updated bank database after visit:
+
++-----------+-------------+-----------+--------------------+-----------------+
+| cname     |   accountid |   balance |   loan_outstanding | loan_deadline   |
+|-----------+-------------+-----------+--------------------+-----------------|
+| Hubert    |         111 | 404537.60 |               0.00 | N/A             |
+| Jess      |         123 | 343099.32 |               0.00 | N/A             |
+| Jeff      |         222 | 113787.12 |          564965.00 | 2023-09-10      |
+| John      |         333 | 724667.11 |          297130.00 | 2023-08-29      |
+| Jim       |         444 |  35599.15 |          238517.00 | 2022-05-24      |
+| Joe       |         555 | 768539.82 |          791537.00 | 2023-05-22      |
+| Jack      |         666 | 155564.45 |               0.00 | N/A             |
+| Templeton |         777 | 673336.22 |               0.00 | N/A             |
+| Jed       |         888 | 621132.71 |          571183.00 | 2022-09-29      |
+| Jill      |         999 |  89286.93 |               0.00 | N/A             |
+| Conner    |       29319 |    100.00 |               0.00 | N/A             |
++-----------+-------------+-----------+--------------------+-----------------+
+
+Have a nice day...
+
+BankingSystem/src via 🐍 v3.10.2 took 48s 
+➜ python Banking.py
+Here some dummy data to reference while you enter new data:
+
++-----------+-------------+-----------+--------------------+-----------------+
+| cname     |   accountid |   balance |   loan_outstanding | loan_deadline   |
+|-----------+-------------+-----------+--------------------+-----------------|
+| Jim       |         111 | 543024.84 |          375844.00 | 2023-08-10      |
+| Joe       |         123 | 185118.65 |          533286.00 | 2022-10-11      |
+| Hubert    |         222 |  -2149.38 |               0.00 | N/A             |
+| Jed       |         333 | 159314.95 |               0.00 | N/A             |
+| Jack      |         444 |  -3279.48 |          105478.00 | 2023-09-25      |
+| Jess      |         555 | 353316.78 |               0.00 | N/A             |
+| Templeton |         666 | 233000.07 |          934992.00 | 2023-02-14      |
+| John      |         777 | 554327.64 |               0.00 | N/A             |
+| Jill      |         888 | 987259.58 |          773614.00 | 2022-03-16      |
+| Jeff      |         999 | 530319.48 |               0.00 | N/A             |
++-----------+-------------+-----------+--------------------+-----------------+
+Please enter name: Conner
+Enter "A" for ATM (Deposits/Withdrawals) or "T" for Teller (Loans)
+T
+Please enter account id: 976
+Please verify your outstanding amount due: 1000000
+Please verify your repayment deadline date (YYYY-MM-DD): 2022-11-14
+Would you like to repay [m]inumum due, repay [t]otal amount due, or [e]nd transaction?
+m
+Prior to payment, loan outstanding: $1000000.0 , deadline: 2022-11-14
+Monthly minimum (total_amount/months_remaining) paid. Remaining outstanding: $875000.0
+Would you like to repay [m]inumum due, repay [t]otal amount due, or [e]nd transaction?
+e
+
+Updated bank database after visit:
+
++-----------+-------------+-----------+--------------------+-----------------+
+| cname     |   accountid |   balance |   loan_outstanding | loan_deadline   |
+|-----------+-------------+-----------+--------------------+-----------------|
+| Jim       |         111 | 543024.84 |          375844.00 | 2023-08-10      |
+| Joe       |         123 | 185118.65 |          533286.00 | 2022-10-11      |
+| Hubert    |         222 |  -2149.38 |               0.00 | N/A             |
+| Jed       |         333 | 159314.95 |               0.00 | N/A             |
+| Jack      |         444 |  -3279.48 |          105478.00 | 2023-09-25      |
+| Jess      |         555 | 353316.78 |               0.00 | N/A             |
+| Templeton |         666 | 233000.07 |          934992.00 | 2023-02-14      |
+| John      |         777 | 554327.64 |               0.00 | N/A             |
+| Jill      |         888 | 987259.58 |          773614.00 | 2022-03-16      |
+| Jeff      |         999 | 530319.48 |               0.00 | N/A             |
+| Conner    |         976 |      0.00 |          875000.00 | 2022-11-14      |
++-----------+-------------+-----------+--------------------+-----------------+
+
+Have a nice day...
+
+BankingSystem/src via 🐍 v3.10.2 took 34s
+➜ python Banking.py
+Here some dummy data to reference while you enter new data:
+
++-----------+-------------+-----------+--------------------+-----------------+
+| cname     |   accountid |   balance |   loan_outstanding | loan_deadline   |
+|-----------+-------------+-----------+--------------------+-----------------|
+| Hubert    |         111 | 544810.36 |               0.00 | N/A             |
+| Joe       |         123 |  95551.88 |          407646.00 | 2023-04-17      |
+| Jed       |         222 |  21008.64 |               0.00 | N/A             |
+| John      |         333 | 962394.88 |          158698.00 | 2023-01-17      |
+| Templeton |         444 | 538433.51 |               0.00 | N/A             |
+| Jess      |         555 | 188138.83 |          607606.00 | 2022-10-13      |
+| Jill      |         666 | 319343.09 |          226347.00 | 2023-11-28      |
+| Jack      |         777 | 968270.48 |               0.00 | N/A             |
+| Jim       |         888 |  -2010.74 |               0.00 | N/A             |
+| Jeff      |         999 | 534900.23 |          893997.00 | 2022-07-31      |
++-----------+-------------+-----------+--------------------+-----------------+
+Please enter name: Conner
+Enter "A" for ATM (Deposits/Withdrawals) or "T" for Teller (Loans)
+T
+Please enter account id: 976
+Please verify your outstanding amount due: 9999999
+Please verify your repayment deadline date (YYYY-MM-DD): 2022-05-01
+Would you like to repay [m]inumum due, repay [t]otal amount due, or [e]nd transaction?
+t
+Loan paid off in full! Remaining outstanding: $0.0
+Would you like to repay [m]inumum due, repay [t]otal amount due, or [e]nd transaction?
+e
+
+Updated bank database after visit:
+
++-----------+-------------+-----------+--------------------+-----------------+
+| cname     |   accountid |   balance |   loan_outstanding | loan_deadline   |
+|-----------+-------------+-----------+--------------------+-----------------|
+| Hubert    |         111 | 544810.36 |               0.00 | N/A             |
+| Joe       |         123 |  95551.88 |          407646.00 | 2023-04-17      |
+| Jed       |         222 |  21008.64 |               0.00 | N/A             |
+| John      |         333 | 962394.88 |          158698.00 | 2023-01-17      |
+| Templeton |         444 | 538433.51 |               0.00 | N/A             |
+| Jess      |         555 | 188138.83 |          607606.00 | 2022-10-13      |
+| Jill      |         666 | 319343.09 |          226347.00 | 2023-11-28      |
+| Jack      |         777 | 968270.48 |               0.00 | N/A             |
+| Jim       |         888 |  -2010.74 |               0.00 | N/A             |
+| Jeff      |         999 | 534900.23 |          893997.00 | 2022-07-31      |
+| Conner    |         976 |      0.00 |               0.00 | 2022-05-01      |
++-----------+-------------+-----------+--------------------+-----------------+
+
+Have a nice day...
